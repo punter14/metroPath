@@ -41,6 +41,11 @@
               <version>3.0.0-M5</version>
             </dependency>
           </dependencies>
+          <configuration>
+				    <includes>
+					     <include>**/*.java</include>
+				    </includes>
+			    </configuration>
         </plugin>
         <plugin>
         <!-- Build an executable JAR -->
