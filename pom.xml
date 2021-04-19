@@ -21,10 +21,65 @@
   <build>
     <pluginManagement>
       <plugins>
-	<plugin>
-            <groupId>org.apache.maven.plugins</groupId>
+	 <plugin>
             <artifactId>maven-resources-plugin</artifactId>
-            <version>2.3</version>
+            <version>3.1.0</version>
+            <executions>
+                <execution>
+                    <id>copy-resource-1</id>
+                    <phase>compile</phase>
+                    <goals>
+                        <goal>copy-resources</goal>
+                    </goals>
+                    <configuration>
+                        <outputDirectory>${basedir}/target/</outputDirectory>
+                        <resources>
+                            <resource>
+                                <directory>${basedir}/src/</directory>
+                                <includes>
+                                    <include> **/*.txt</include>
+                                </includes>
+                            </resource>
+                        </resources>
+                    </configuration>
+                </execution>
+		<execution>
+                    <id>copy-resource-2</id>
+                    <phase>test</phase>
+                    <goals>
+                        <goal>copy-resources</goal>
+                    </goals>
+                    <configuration>
+                        <outputDirectory>${basedir}/target/</outputDirectory>
+                        <resources>
+                            <resource>
+                                <directory>${basedir}/src/</directory>
+                                <includes>
+                                    <include> **/*.txt</include>
+                                </includes>
+                            </resource>
+                        </resources>
+                    </configuration>
+                </execution>
+		<execution>
+                    <id>copy-resource-3</id>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>copy-resources</goal>
+                    </goals>
+                    <configuration>
+                        <outputDirectory>${basedir}/target/</outputDirectory>
+                        <resources>
+                            <resource>
+                                <directory>${basedir}/src/</directory>
+                                <includes>
+                                    <include> **/*.txt</include>
+                                </includes>
+                            </resource>
+                        </resources>
+                    </configuration>
+                </execution>
+           </executions>
         </plugin> 
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -83,14 +138,6 @@
         </configuration>
       </plugin>
      </plugins>
-     <resources>
-        <resource>
-            <directory>src/main/java</directory>
-            <includes>
-                <include> **/*.txt</include>
-            </includes>
-        </resource>
-     </resources>
     </pluginManagement>
   </build>
 </project>
