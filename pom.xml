@@ -31,7 +31,8 @@
                         <goal>copy-resources</goal>
                     </goals>
                     <configuration>
-                        <outputDirectory>${basedir}/target/</outputDirectory>
+                        <outputDirectory>${basedir}/target/classes</outputDirectory>
+                        <encoding>UTF-8</encoding>
                         <resources>
                             <resource>
                                 <directory>${basedir}/src/</directory>
@@ -49,7 +50,8 @@
                         <goal>copy-resources</goal>
                     </goals>
                     <configuration>
-                        <outputDirectory>${basedir}/target/</outputDirectory>
+                        <outputDirectory>${basedir}/target/classes/</outputDirectory>
+                        <encoding>UTF-8</encoding>
                         <resources>
                             <resource>
                                 <directory>${basedir}/src/</directory>
@@ -67,7 +69,8 @@
                         <goal>copy-resources</goal>
                     </goals>
                     <configuration>
-                        <outputDirectory>${basedir}/target/</outputDirectory>
+                        <outputDirectory>${basedir}/target/classes</outputDirectory>
+                        <encoding>UTF-8</encoding>
                         <resources>
                             <resource>
                                 <directory>${basedir}/src/</directory>
