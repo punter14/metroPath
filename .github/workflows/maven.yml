@@ -35,4 +35,4 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
     - name: Run unit tests
-      run: mvn test
+      run: mvn -X test
