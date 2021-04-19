@@ -2,7 +2,7 @@
 Small Java program to find shortest path between two metro stations
 
 Input configuration file is data.txt, where different metro lines are added to configuration.
-Structure of input file (data.txt) is as below
+Structure of input file (data.txt)
 
 <Line #>|<Station_Name>_<Color>|<Station_Name>_<Color>|<Station_Name>_<Color>|<Station_Name>_<Color>...........
 
