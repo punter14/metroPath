@@ -23,7 +23,7 @@ import metrosearch.util.ReadConfigData;
  * TC for checking if config file for metro configuration exists or not
  *
  */
-public class JUnitTC1 {
+public class JUnitTest1 {
 
 	/**
 	 * @throws java.lang.Exception
