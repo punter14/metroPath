@@ -1,2 +1,0 @@
-Line 1|A|B|C|D|E|F
-Line 2|A|B|C|G_Green|H_Red|I_Green|F
