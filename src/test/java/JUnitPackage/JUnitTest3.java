@@ -18,6 +18,8 @@ public class JUnitTest3 {
 	public void setUp() throws Exception {
 		ReadConfigData.setMetroLines(null);
 		ReadConfigData.setLinenum(0);
+		FindShortestPath.setResultPath("");
+		InitializeSearch.setLines(null);
 	}
 
 	@Test
