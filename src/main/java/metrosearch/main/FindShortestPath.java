@@ -106,8 +106,10 @@ public class FindShortestPath {
 		
 		path+="\n";
 		
-		path+="Need to change metro lines "+transfer.size()+" times at ";
+		path+="Need to change metro lines "+transfer.size()+" times ";
 		for(int a=0;a<transfer.size();a++) {
+			if(a==0)
+				path+="at ";
 			path+=("<"+transfer.get(a)+"> ");
 		}
 		path+="\n";
