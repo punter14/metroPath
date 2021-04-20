@@ -48,6 +48,8 @@ public class JUnitTest1 {
 	public void test_configuration_file_exists() {
 		String filepath = InitiateMetroSearch.class.getResource("data.txt").getPath();
 		File file = new File(filepath);
+		if(file.exists())
+			System.out.println("Input file data.txt exists!!");
 		assertTrue(file.exists());
 	}
 	/**
@@ -59,9 +61,9 @@ public class JUnitTest1 {
 		try {
 			new InitializeSearch("A","F","",inputStream);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		System.out.println("Executing first test of shortest path between A and F without color");
 		assertEquals(FindShortestPath.resultPath, "A->B->C->D->E->F");
 	}
 	

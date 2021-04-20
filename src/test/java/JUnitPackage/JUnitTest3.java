@@ -29,9 +29,9 @@ public class JUnitTest3 {
 		try {
 			new InitializeSearch("A","F","Green",inputStream);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		System.out.println("Executing third test of shortest path between A and F with line color Green");
 		assertTrue(FindShortestPath.resultPath.equals("A->B->C->G->I->F") || FindShortestPath.resultPath.equals("A->B->C->D->E->F"));
 	}
 
