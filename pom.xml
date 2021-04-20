@@ -34,45 +34,7 @@
             <executions>
                 <execution>
                     <id>copy-resource-1</id>
-                    <phase>compile</phase>
-                    <goals>
-                        <goal>copy-resources</goal>
-                    </goals>
-                    <configuration>
-                        <outputDirectory>${basedir}/target/classes</outputDirectory>
-                        <encoding>UTF-8</encoding>
-                        <resources>
-                            <resource>
-                                <directory>${basedir}/src/</directory>
-                                <includes>
-                                    <include> **/*.txt</include>
-                                </includes>
-                            </resource>
-                        </resources>
-                    </configuration>
-                </execution>
-		<execution>
-                    <id>copy-resource-2</id>
-                    <phase>test</phase>
-                    <goals>
-                        <goal>copy-resources</goal>
-                    </goals>
-                    <configuration>
-                        <outputDirectory>${basedir}/target/classes/</outputDirectory>
-                        <encoding>UTF-8</encoding>
-                        <resources>
-                            <resource>
-                                <directory>${basedir}/src/</directory>
-                                <includes>
-                                    <include> **/*.txt</include>
-                                </includes>
-                            </resource>
-                        </resources>
-                    </configuration>
-                </execution>
-		<execution>
-                    <id>copy-resource-3</id>
-                    <phase>package</phase>
+                    <phase>default</phase>
                     <goals>
                         <goal>copy-resources</goal>
                     </goals>
