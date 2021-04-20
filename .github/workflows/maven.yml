@@ -31,4 +31,6 @@ jobs:
       with:
         name: Package
         path: staging
-    - run: java -jar D:\a\metroPath\metroPath\staging\metro-path-1.0-SNAPSHOT.jar "pedro de valdivia" "las mercedes" "red"
+    - run: |
+            cd staging
+            java -jar metro-path-1.0-SNAPSHOT.jar "pedro de valdivia" "las mercedes" "red"
