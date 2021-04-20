@@ -24,6 +24,8 @@ public class FindShortestPath {
     public static String resultPath="";
 
 
+	
+
 	public FindShortestPath(String frmStation, String destStation, String lineColor, List<Line> lines, List<String> stations)  {
 		lines2.addAll(lines);
 		
@@ -104,13 +106,17 @@ public class FindShortestPath {
 		
 		path+="\n";
 		
-		path+="Need to change metro lines "+transfer.size()+" times ";
+		path+="Need to change metro lines "+transfer.size()+" times at ";
 		for(int a=0;a<transfer.size();a++) {
-			path+=(transfer.get(a)+" ");
+			path+=("<"+transfer.get(a)+"> ");
 		}
 		path+="\n";
 		System.out.println(path);
 
+	}
+	
+	public static void setResultPath(String resultPath) {
+		FindShortestPath.resultPath = resultPath;
 	}
 	
 

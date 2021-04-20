@@ -33,12 +33,12 @@ public class InitializeSearch {
 			System.out.println("Input recieved for Start or Destination cannot be empty");
 			System.exit(0);
 		}
-		else if(!isStation(frmStation) || !isStation(destStation)){
-			System.out.println("Input recieved for Start or Destination does not exist in metro map configuration");
-			System.exit(0);
-		}
 		else if((!isStation(frmStation) || !isStation(destStation) ) && !UtilMethods.isNullOrEmpty(colorLine)){
 			System.out.println("Input recieved for Start or Destination does not match with color configuratoin");
+			System.exit(0);
+		}
+		else if(!isStation(frmStation) || !isStation(destStation)){
+			System.out.println("Input recieved for Start or Destination does not exist in metro map configuration");
 			System.exit(0);
 		}
 		 else if(frmStation.equals(destStation)) {
@@ -55,4 +55,9 @@ public class InitializeSearch {
 		}
 		return false;
 	}
+	
+	public static void setLines(List<Line> lines) {
+		InitializeSearch.lines = lines;
+	}
+
 }

@@ -15,14 +15,23 @@ public class InitiateMetroSearch{
 	 * @throws IOException
 	 */
 	public static void main(String[] args) throws IOException  {
+		String frmStation,destStation,colorLine = null;
+		if(args.length==0) {
 		Scanner in = new Scanner(System.in);	
 		System.out.println("Please enter Start Station");
-        String frmStation = in.nextLine().toUpperCase();
+        frmStation = in.nextLine().toUpperCase();
         System.out.println("Please enter Destination");
-        String destStation = in.nextLine().toUpperCase();
+        destStation = in.nextLine().toUpperCase();
         System.out.println("Please enter Color of the line (Optional)");
-        String colorLine = in.nextLine().toUpperCase();
+        colorLine = in.nextLine().toUpperCase();
         in.close();
+		}
+		else {
+			frmStation = args[0].toUpperCase();
+			destStation = args[1].toUpperCase();
+			if(args.length>2)
+				colorLine = args[2].toUpperCase();		
+		}
         String filepath = InitiateMetroSearch.class.getResource("data.txt").getPath();
 		new InitializeSearch(frmStation,destStation,colorLine,filepath);
 	}
