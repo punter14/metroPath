@@ -20,9 +20,9 @@ On execution of main class, InitiateMetroSearch, it will ask for input parameter
 If you wish to execute and wish to see the output for inputs in github itself, then please edit metroPath/.github/workflows/maven.yml
 
 Replace the existing parameters "pedro de valdivia" "las mercedes" "red" with desired parameters
-arg_0 - From_Station
-arg_1 - To_Station
-arg_2 - Line_Color (optional)
+  1) arg_0 - From_Station
+  2) arg_1 - To_Station
+  3) arg_2 - Line_Color (optional)
 
 File data.txt (metroPath/src/main/java/metrosearch/main/) is loaded with santiago de chile metro lines , if you wish to change the metro configuration, you can change the input in data.txt
 
@@ -37,6 +37,8 @@ Once run manually, after the build is run... you can click on recent workflow ru
 you can see it in this step Run java -jar D:\a\metroPath\metroPath\staging\metro-path-1.0-SNAPSHOT.jar, as below
 
 Run java -jar D:\a\metroPath\metroPath\staging\metro-path-1.0-SNAPSHOT.jar "pedro de valdivia" "las mercedes" "red"
+
+
 **Below is the shortest path 
 PEDRO DE VALDIVIA->LOS LEONES->IN�S DE SU�REZ->�U�OA->ESTADIO NACIONAL->�UBLE->CARLOS VALDOVINOS->SAN JOAQU�N->MIRADOR->BELLAVISTA DE LA FLORIDA->VICENTE VALD�S->TRINIDAD->LOS QUILLAYES->ELISA CORREA->HOSPITAL S�TERO DEL R�O->LAS MERCEDES
 
