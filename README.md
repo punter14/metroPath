@@ -17,7 +17,7 @@ On execution of main class, InitiateMetroSearch, it will ask for input parameter
 2) Destination
 3) Color (optional) - can be left blank
 
-If you wish to execute and wish to see the output for inputs, then please edit metroPath/.github/workflows/maven.yml
+If you wish to execute and wish to see the output for inputs in github itself, then please edit metroPath/.github/workflows/maven.yml
 
 Replace the existing parameters "pedro de valdivia" "las mercedes" "red" with desired parameters
 arg_0 - From_Station
