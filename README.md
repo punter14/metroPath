@@ -34,12 +34,10 @@ Once the maven.yml is updated with desired inputs
 
 Once run manually, after the build is run... you can click on recent workflow run and then on build to see the output of the program run with desired inputs
 
-you can see it in this step Run java -jar D:\a\metroPath\metroPath\staging\metro-path-1.0-SNAPSHOT.jar, as below
-
-Run java -jar D:\a\metroPath\metroPath\staging\metro-path-1.0-SNAPSHOT.jar "pedro de valdivia" "las mercedes" "red"
+you can see it in this step **Running the program**, as below
 
 
-**Below is the shortest path 
-PEDRO DE VALDIVIA->LOS LEONES->IN�S DE SU�REZ->�U�OA->ESTADIO NACIONAL->�UBLE->CARLOS VALDOVINOS->SAN JOAQU�N->MIRADOR->BELLAVISTA DE LA FLORIDA->VICENTE VALD�S->TRINIDAD->LOS QUILLAYES->ELISA CORREA->HOSPITAL S�TERO DEL R�O->LAS MERCEDES
+Below is the shortest path 
+PEDRO DE VALDIVIA->LOS LEONES->INÉS DE SUÁREZ->ÑUÑOA->ESTADIO NACIONAL->ÑUBLE->CARLOS VALDOVINOS->SAN JOAQUÍN->MIRADOR->BELLAVISTA DE LA FLORIDA->VICENTE VALDÉS->TRINIDAD->LOS QUILLAYES->ELISA CORREA->HOSPITAL SÓTERO DEL RÍO->LAS MERCEDES
 
-**Need to change metro lines 3 times at <LOS LEONES> <�UBLE> <VICENTE VALD�S> ****
+Need to change metro lines 3 times at <LOS LEONES> <ÑUBLE> <VICENTE VALDÉS> 
