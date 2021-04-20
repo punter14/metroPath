@@ -26,11 +26,13 @@ jobs:
         distribution: 'adopt'
     - name: Build with Maven
       run: mvn clean install -DskipTests
-    - run: mkdir staging && cp target/*.jar staging
+    - name: Copying the artifact jar
+      run: mkdir staging && cp target/*.jar staging
     - uses: actions/upload-artifact@v2
       with:
         name: Package
         path: staging
-    - run: |
+    - name: Running the program
+      run: |
             cd staging
             java -jar metro-path-1.0-SNAPSHOT.jar "pedro de valdivia" "las mercedes" "red"
