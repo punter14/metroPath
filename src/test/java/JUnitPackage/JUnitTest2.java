@@ -26,12 +26,13 @@ public class JUnitTest2 {
 	@Test
 	public void test_config_file_Color_Data_Red() {
 		InputStream inputStream = InitiateMetroSearch.class.getResourceAsStream("test_input.txt");
+		System.out.println("Executing second test of shortest path between A and F with line color Red");
 		try {
 			new InitializeSearch("A","F","Red",inputStream);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		System.out.println("Executing second test of shortest path between A and F with line color Red");
+		
 		assertEquals(FindShortestPath.resultPath, "A->B->C->H->F");
 	}
 

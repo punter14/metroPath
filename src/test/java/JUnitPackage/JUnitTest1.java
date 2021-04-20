@@ -58,12 +58,13 @@ public class JUnitTest1 {
 	@Test
 	public void test_config_file_Data() {
 		InputStream inputStream = InitiateMetroSearch.class.getResourceAsStream("test_input.txt");
+		System.out.println("Executing first test of shortest path between A and F without color");
 		try {
 			new InitializeSearch("A","F","",inputStream);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		System.out.println("Executing first test of shortest path between A and F without color");
+		
 		assertEquals(FindShortestPath.resultPath, "A->B->C->D->E->F");
 	}
 	
