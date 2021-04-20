@@ -15,8 +15,8 @@ on:
 jobs:
   build:
 
-    runs-on: windows-latest
-
+    runs-on: ubuntu-latest
+  
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 11
@@ -27,9 +27,9 @@ jobs:
     - name: Build with Maven
       run: mvn clean install -DskipTests
     - run: mkdir staging && cp target/*.jar staging
+    - run: echo "Executing the program" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
     - uses: actions/upload-artifact@v2
       with:
         name: Package
         path: staging
-    - run: echo "Executing the program" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
     - run: java -jar D:\a\metroPath\metroPath\staging\metro-path-1.0-SNAPSHOT.jar "pedro de valdivia" "las mercedes" "red"
