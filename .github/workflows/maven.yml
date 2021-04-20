@@ -35,4 +35,4 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
     - name: Run basic unit test
-      run: mvn test -Dtest=JUnitTest1
+      run: mvn test
