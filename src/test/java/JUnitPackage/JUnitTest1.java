@@ -8,6 +8,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -54,9 +55,9 @@ public class JUnitTest1 {
 	 */
 	@Test
 	public void test_config_file_Data() {
-		String filepath = InitiateMetroSearch.class.getResource("test_input.txt").getPath();
+		InputStream inputStream = InitiateMetroSearch.class.getResourceAsStream("test_input.txt");
 		try {
-			new InitializeSearch("A","F","",filepath);
+			new InitializeSearch("A","F","",inputStream);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

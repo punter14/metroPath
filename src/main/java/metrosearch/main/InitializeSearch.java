@@ -1,6 +1,7 @@
 package metrosearch.main;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,8 +20,8 @@ public class InitializeSearch {
 	private List<String> stations = new ArrayList<String>();
 	
 
-	public InitializeSearch(String frmStation, String destStation, String colorLine, String filepath) throws IOException {
-		new ReadConfigData(filepath,lines, colorLine);
+	public InitializeSearch(String frmStation, String destStation, String colorLine, InputStream inputStream) throws IOException {
+		new ReadConfigData(inputStream,lines, colorLine);
 		lines = ReadConfigData.getMetroLines();
         validateInput(frmStation,destStation,colorLine);
         new FindShortestPath(frmStation, destStation, colorLine, lines, stations);

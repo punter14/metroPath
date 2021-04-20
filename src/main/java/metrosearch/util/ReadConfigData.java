@@ -3,6 +3,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -21,17 +22,17 @@ public class ReadConfigData {
 	public static List<Line> metroLines;
 
 	/**
-	 * @param pathname
+	 * @param inputStream
 	 * @param lines
 	 * @param colorLine
 	 * @throws IOException
 	 */
-	public ReadConfigData(String pathname, List<Line> lines, String colorLine) throws IOException{
+	public ReadConfigData(InputStream inputStream, List<Line> lines, String colorLine) throws IOException{
 		
 		lines = new ArrayList<>(); 
 		//Reading input file data.txt where lines and stations are defined
-		File file = new File(pathname);
-		InputStreamReader rdr = new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8);
+		//File file = new File(inputStream);
+		InputStreamReader rdr = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
 		BufferedReader br = new BufferedReader(rdr);
 		try {
 			String content=null;

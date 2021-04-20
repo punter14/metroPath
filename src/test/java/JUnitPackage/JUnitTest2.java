@@ -3,6 +3,7 @@ package JUnitPackage;
 import static org.junit.Assert.*;
 
 import java.io.IOException;
+import java.io.InputStream;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -24,9 +25,9 @@ public class JUnitTest2 {
 
 	@Test
 	public void test_config_file_Color_Data_Red() {
-		String filepath = InitiateMetroSearch.class.getResource("test_input.txt").getPath();
+		InputStream inputStream = InitiateMetroSearch.class.getResourceAsStream("test_input.txt");
 		try {
-			new InitializeSearch("A","F","Red",filepath);
+			new InitializeSearch("A","F","Red",inputStream);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

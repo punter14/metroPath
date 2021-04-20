@@ -2,6 +2,7 @@ package metrosearch.main;
 
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Scanner;
 
 /**
@@ -32,7 +33,8 @@ public class InitiateMetroSearch{
 			if(args.length>2)
 				colorLine = args[2].toUpperCase();		
 		}
-        String filepath = InitiateMetroSearch.class.getResource("data.txt").getPath();
-		new InitializeSearch(frmStation,destStation,colorLine,filepath);
+        //String filepath = InitiateMetroSearch.class.getResource("data.txt").getPath();
+        InputStream inputStream = InitiateMetroSearch.class.getResourceAsStream("data.txt");
+		new InitializeSearch(frmStation,destStation,colorLine,inputStream);
 	}
 }
